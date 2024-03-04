@@ -76,7 +76,7 @@ public class VeterinariaTest {
 
     @Test
 
-    public void estudianteRepetido() {
+    public void mascotaRepetida() {
         LOG.info("Inicio test agregar mascota repetida");
 
         Veterinaria veterinaria = new Veterinaria("Perros");
