@@ -88,7 +88,7 @@ public class Drogueria {
         .anyMatch(producto-> producto.getCodigoProducto().equals(nombre));
 }
 
-public List<Producto> getProductosConStockMayorA100(List<Producto> listaProductos) {
+public List<Producto> getProductosConStockMayorA100() {
     List<Producto> resultado = new ArrayList<>();
     for (Producto producto : listaProductos) {
         if (producto.getStok() > 100) {

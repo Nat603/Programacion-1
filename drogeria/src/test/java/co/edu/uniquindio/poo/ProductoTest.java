@@ -2,9 +2,7 @@ package co.edu.uniquindio.poo;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-
-import java.util.LinkedList;
-import java.util.List;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.logging.Logger;
 import org.junit.jupiter.api.Test;
 
@@ -25,25 +23,25 @@ public class ProductoTest {
    public void stockMayor100(){
 
     LOG.info("Inicio de la prueba metodo productos stok mayor a 100");
+
     var drogueria = new Drogueria("Mi Droguería");
-    var listaProductos = new LinkedList<>();
+    
 
     
-    listaProductos.add(new Medicamento("P1", "Producto 1", "Descripción 1", 120.0, 50, "Proveedor A", 3.4));
-    listaProductos.add(new Medicamento("P2", "Producto 2", "Descripción 2", 80.0, 200, "Proveedor B", 3.3));
-    listaProductos.add(new Medicamento("P3", "Producto 3", "Descripción 3", 150.0, 110, "Proveedor C", 5.2));
-
-    for (Producto producto : listaProductos) {
-            drogueria.addProducto(producto);
-        }
+    drogueria.addProducto(new Medicamento("P1", "Producto 1", "Descripción 1", 120.0, 50, "Proveedor A", 3.4));
+    drogueria.addProducto(new Medicamento("P2", "Producto 2", "Descripción 2", 80.0, 200, "Proveedor B", 3.3));
+    drogueria.addProducto(new Medicamento("P3", "Producto 3", "Descripción 3", 150.0, 110, "Proveedor C", 5.2));
 
 
-        List<Producto> resultado = drogueria.getProductosConStockMayorA100();
+        var resultado = drogueria.getProductosConStockMayorA100();
 
     
         assertEquals(2, resultado.size());
+
+        for (Producto producto : resultado) {
+            assertTrue(producto.getStok() > 100);
     LOG.info("Final de la prueba metodo productos stok mayor a 100");
    }
-     
+}
 
 }
