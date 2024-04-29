@@ -25,8 +25,8 @@ public class ProductoTest {
    public void stockMayor100(){
 
     LOG.info("Inicio de la prueba metodo productos stok mayor a 100");
-    drogueria = new Drogueria("Mi Droguería");
-    listaProductos = new LinkedList<>();
+    var drogueria = new Drogueria("Mi Droguería");
+    var listaProductos = new LinkedList<>();
 
     
     listaProductos.add(new Medicamento("P1", "Producto 1", "Descripción 1", 120.0, 50, "Proveedor A", 3.4));
