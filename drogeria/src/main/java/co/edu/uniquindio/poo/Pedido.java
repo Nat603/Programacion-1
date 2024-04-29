@@ -21,6 +21,16 @@ public class Pedido {
         return cantidad;
     }
 
+    public double calcularCostoTotal() {
+        if (producto != null) {
+            return cantidad * producto.getPrecio();
+        } else {
+            throw new IllegalStateException("No se ha asignado un producto al pedido.");}
+        }
+
+    public void setProducto(Producto producto2) {
     
+        this.producto= producto2;
+    }
     
 }

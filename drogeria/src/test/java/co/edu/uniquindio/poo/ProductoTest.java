@@ -42,7 +42,8 @@ public class ProductoTest {
 
     
         assertEquals(2, resultado.size());
-
+    LOG.info("Final de la prueba metodo productos stok mayor a 100");
    }
+     
 
 }
