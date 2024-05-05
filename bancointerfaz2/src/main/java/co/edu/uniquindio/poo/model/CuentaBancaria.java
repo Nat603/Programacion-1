@@ -1,4 +1,6 @@
-package co.edu.uniquindio.poo;
+package co.edu.uniquindio.poo.model;
+
+
 import java.util.Collection;
 import java.util.LinkedList;
 
@@ -82,3 +84,4 @@ public abstract class CuentaBancaria {
   
     
 }
+

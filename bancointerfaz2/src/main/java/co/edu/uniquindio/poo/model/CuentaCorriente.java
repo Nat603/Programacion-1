@@ -1,4 +1,4 @@
-package co.edu.uniquindio.poo;
+package co.edu.uniquindio.poo.model;
 
 public class CuentaCorriente extends CuentaBancaria{
     private double sobregiro;
