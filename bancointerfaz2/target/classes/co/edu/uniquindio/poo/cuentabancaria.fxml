@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.controller.ControllerCuentaBancaria">
+   <children>
+      <SplitPane dividerPositions="0.8506024096385542" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label layoutX="232.0" layoutY="31.0" text="Crear cuenta bancaria">
+                     <font>
+                        <Font name="Calibri" size="15.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="98.0" layoutY="60.0" prefHeight="7.0" prefWidth="401.0" />
+                  <Label layoutX="70.0" layoutY="103.0" text="Numero cuenta" />
+                  <Label layoutX="70.0" layoutY="159.0" text="Saldo" />
+                  <Label layoutX="70.0" layoutY="208.0" text="Estado" />
+                  <Label layoutX="70.0" layoutY="265.0" text="Tipo de cuenta" />
+                  <TextField fx:id="txnumcuenta" layoutX="207.0" layoutY="99.0" />
+                  <TextField fx:id="txsaldo" layoutX="207.0" layoutY="155.0" />
+                  <CheckBox fx:id="ckActivo" layoutX="171.0" layoutY="208.0" mnemonicParsing="false" text="Activo" />
+                  <CheckBox fx:id="ckInactivo" layoutX="293.0" layoutY="208.0" mnemonicParsing="false" text="Inactivo" />
+                  <CheckBox fx:id="ckAhorros" layoutX="171.0" layoutY="265.0" mnemonicParsing="false" text="Ahorros" />
+                  <CheckBox fx:id="ckCorriente" layoutX="299.0" layoutY="265.0" mnemonicParsing="false" text="Corriente" />
+                  <Button fx:id="btnguardarcb" layoutX="220.0" layoutY="295.0" mnemonicParsing="false" onAction="#addCuentaBancaria" text="Guardar cuenta bancaria" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="197.0" prefWidth="524.0" />
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
