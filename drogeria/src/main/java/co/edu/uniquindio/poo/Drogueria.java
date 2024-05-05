@@ -71,8 +71,8 @@ public class Drogueria {
 
     private boolean existeEmpleado(String nombre){
 
-        return listaClientes.stream()
-        .anyMatch(cliente -> cliente.getNombre().equals(nombre));
+        return listaEmpleados.stream()
+        .anyMatch(empleado -> empleado.getNombre().equals(nombre));
     }
 
     private boolean existePedido(LocalDate fecha){
