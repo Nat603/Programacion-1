@@ -5,7 +5,7 @@ public class Puesto {
 
     private final String nombre;
     private int[] posicion; // posicion[0] es la fila, posicion[1] es la columna
-    private boolean disponibilidad;
+    public boolean disponibilidad;
     private Vehiculo vehiculo;
 
 
@@ -47,5 +47,12 @@ public class Puesto {
         return disponibilidad;
     }
 
+    public boolean isDisponibilidad() {
+        return disponibilidad;
+    }
+
+    public void setDisponibilidad(boolean disponibilidad) {
+        this.disponibilidad = disponibilidad;
+    }
 
 }

@@ -1,23 +1,18 @@
 package co.edu.uniquindio.poo;
 
-import java.util.Collection;
-import java.util.LinkedList;
-
 public class Parqueadero {
 
     private final String nombre;
     private int numeroPuestos;
-    private final Collection <Registro> listaRegistros;
     private Puesto[][] puestos;
+  
 
-
-    public Parqueadero(String nombre, int filas, int columnas, Collection<Registro> listaRegistros) {
+    public Parqueadero(String nombre, int filas, int columnas, int puestos) {
         this.nombre = nombre;
         this.numeroPuestos = filas * columnas;
-
-        this.listaRegistros = new LinkedList<>();
-        this.puestos = new Puesto[filas][columnas]; 
+        this.puestos = new Puesto[filas][columnas];
     }
+
 
 
     public String getNombre() {
@@ -34,19 +29,6 @@ public class Parqueadero {
         this.numeroPuestos = numeroPuestos;
     }
 
-
-    public Collection<Registro> getListaRegistros() {
-        return listaRegistros;
-    }
-
-    public void agregarRegistro(Registro registro) {
-        listaRegistros.add(registro);
-    }
-
-
-
-
-
     public boolean verificarDisponibilidad(int fila, int columna) {
         for (Puesto[] filaPuestos : puestos) {
             for (Puesto puesto : filaPuestos) {
@@ -55,17 +37,18 @@ public class Parqueadero {
                 }
             }
         }
-        return true; 
-    }
-    
-
-    public double dineroTotal() {
-        double total = 0;
-        for (Registro registro : listaRegistros) {
-            total += registro.calcularTarifa();
-        }
-        return total;
+        return true;
     }
 
+      
+
+
+    public void setPuestos(Puesto[][] puestos) {
+        this.puestos = puestos;
+    } 
 
 }
+    
+
+    
+
