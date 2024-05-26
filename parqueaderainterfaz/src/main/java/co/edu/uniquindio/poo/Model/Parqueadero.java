@@ -1,7 +1,6 @@
-package co.edu.uniquindio.poo;
+package co.edu.uniquindio.poo.Model;
 
 public class Parqueadero {
-
     private final String nombre;
     private int numeroPuestos;
     private Puesto[][] puestos;
@@ -55,7 +54,3 @@ public class Parqueadero {
     } 
 
 }
-    
-
-    
-

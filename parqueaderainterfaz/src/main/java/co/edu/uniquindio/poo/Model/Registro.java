@@ -1,10 +1,9 @@
-package co.edu.uniquindio.poo;
+package co.edu.uniquindio.poo.Model;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 
 public class Registro {
-
     private final LocalDateTime horaIngreso;
     private final LocalDateTime horaSalida; 
     private final Vehiculo vehiculo; 
@@ -54,5 +53,5 @@ public class Registro {
         return valor; 
     }
 
-
+ 
 }

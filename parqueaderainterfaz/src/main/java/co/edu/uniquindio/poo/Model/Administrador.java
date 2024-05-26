@@ -1,4 +1,4 @@
-package co.edu.uniquindio.poo;
+package co.edu.uniquindio.poo.Model;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -7,19 +7,30 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Admismistrador {
-
+public class Administrador {
     private final String nombre;
     private double tarifaHora;
     private final Collection <Registro> listaRegistros;
-    
-    
-    public Admismistrador(String nombre, double tarifaHora, Collection<Registro> listaRegistros) {
+
+    public Administrador(String nombre, double tarifaHora) {
         this.nombre = nombre;
         this.tarifaHora = tarifaHora;
+    
         this.listaRegistros = new LinkedList<>();
+    
+    }
+    public void addR(Registro registro){
+        assert!existeRegistro(registro.getHoraIngreso());
+        listaRegistros.add(registro);
+        
     }
 
+    public boolean existeRegistro(LocalDateTime horaIngreso){
+        
+        return listaRegistros.stream()
+        .anyMatch(cuenta -> cuenta.getHoraIngreso()==(horaIngreso));
+
+    }
     public String getNombre() {
         return nombre;
     }
