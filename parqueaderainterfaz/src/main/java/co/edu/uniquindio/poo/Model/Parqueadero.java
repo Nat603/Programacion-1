@@ -1,15 +1,15 @@
 package co.edu.uniquindio.poo.Model;
-
+//Clase parqueadero la cual tiene un matriz de puestos y un metodo que dice si es puesto esta o no disponible
 public class Parqueadero {
     private final String nombre;
     private int numeroPuestos;
-    private Puesto[][] puestos;
+    private Puesto[][] puestos;//matriz de puestos
   
 
     public Parqueadero(String nombre, int filas, int columnas, int puestos) {
         this.nombre = nombre;
         this.numeroPuestos = filas * columnas;
-        this.puestos = new Puesto[filas][columnas];
+        this.puestos = new Puesto[filas][columnas];// la matriz se coompone de filas y columnas
     }
 
 
@@ -28,15 +28,15 @@ public class Parqueadero {
         this.numeroPuestos = numeroPuestos;
     }
 
-    public boolean verificarDisponibilidad(int fila, int columna) {
+    public boolean verificarDisponibilidad(int fila, int columna) {//metodo que dice si un puesto esta disponible o no
         for (Puesto[] filaPuestos : puestos) {
             for (Puesto puesto : filaPuestos) {
-                if ((puesto.getFila() == fila || puesto.getColumna() == columna) && !puesto.estaDisponible()) {
-                    return false; // Al menos un puesto está ocupado
+                if ((puesto.getFila() == fila || puesto.getColumna() == columna) && !puesto.estaDisponible()) {// si de una misma columna y fila no esta disponible retorna falso
+                    return false;
                 }
             }
         }
-        return true; // Todos los puestos en la fila/columna están disponibles
+        return true; // Si esta disponible retorna true
     
     }
 

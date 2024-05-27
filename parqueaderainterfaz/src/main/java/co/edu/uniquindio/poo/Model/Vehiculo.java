@@ -1,19 +1,17 @@
 package co.edu.uniquindio.poo.Model;
-
+// clase abstracta Vehiculo la cual tiene varios atributos que hereda
 public abstract class Vehiculo {
     private final String nombre;
     private final String placa;
     private final String modelo;
-    private final double tarifaHora;
     private Propietario Propietario;
-    private Puesto puestoPorVehiculo;
+    private Puesto puestoPorVehiculo;// el puesto que esta asociado al vehiculo
 
 
-    public Vehiculo(String nombre, String placa, String modelo, double tarifaHora,Propietario propietario, Puesto puestoPorVehiculo) {
+    public Vehiculo(String nombre, String placa, String modelo,Propietario propietario, Puesto puestoPorVehiculo) {
         this.nombre = nombre;
         this.placa = placa;
         this.modelo = modelo;
-        this.tarifaHora = tarifaHora;
         Propietario = propietario;
         this.puestoPorVehiculo = puestoPorVehiculo;
     }
@@ -26,9 +24,7 @@ public abstract class Vehiculo {
     public String getModelo() {
         return modelo;
     }
-    public double getTarifaHora() {
-        return tarifaHora;
-    }
+    
     public Propietario getPropietario() {
         return Propietario;
     }

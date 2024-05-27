@@ -1,15 +1,16 @@
 package co.edu.uniquindio.poo.Model;
+// clase Puesto la cual tiene posiciones dice si esta disponible o no y esta relacionada con un vehiculo si esta ocupado
 
 public class Puesto {
     private final String nombre;
-    private int[] posicion; // posicion[0] es la fila, posicion[1] es la columna
+    private int[] posicion; 
     public boolean disponibilidad;
     private Vehiculo vehiculo;
 
 
     public Puesto(String nombre, int fila, int columna, boolean disponibilidad) {
         this.nombre = nombre;
-        this.posicion = new int[] {fila, columna};
+        this.posicion = new int[] {fila, columna};// la posicion esta dentro de una fila y una columna
         this.disponibilidad = disponibilidad;
     }
 
@@ -49,7 +50,10 @@ public class Puesto {
         return disponibilidad;
     }
 
-    public void setDisponibilidad(boolean disponibilidad) {
+    public void setDisponibilidad(boolean disponibilidad) {//metodo que dice si esta disponible o no el puesto
         this.disponibilidad = disponibilidad;
+        if (!disponibilidad) {
+            this.vehiculo = null; // Si no está disponible, no hay vehículo asociado
+        }
     }
 }
