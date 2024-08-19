@@ -8,29 +8,18 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
 
-/**
- * JavaFX App
- */
 public class App extends Application {
-
 
     private static Scene scene;
 
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("viewParqueadero.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
+        Parent root = fxmlLoader.load(); // Carga el archivo FXML
+        scene = new Scene(root);
         stage.setScene(scene);
+        stage.setTitle("Sistema de Parqueadero"); // es el título de la ventana
         stage.show();
-    }
-
-    static void setRoot(String fxml) throws IOException {
-        scene.setRoot(loadFXML(fxml));
-    }
-
-    private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("viewParqueadero.fxml"));
-        return fxmlLoader.load();
     }
 
     public static void main(String[] args) {

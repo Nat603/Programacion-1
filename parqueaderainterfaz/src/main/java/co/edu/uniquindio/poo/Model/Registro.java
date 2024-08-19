@@ -2,7 +2,7 @@ package co.edu.uniquindio.poo.Model;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
-// clase registro que tiene la fecha de ungreso y salida del vehiculo, el vehiculo y el puesto asociado ael vehiculo
+// clase registro que tiene la fecha de ingreso y salida del vehiculo, el vehiculo y el puesto asociado a el vehiculo
 public class Registro {
     private final LocalDateTime horaIngreso;
     private final LocalDateTime horaSalida; 

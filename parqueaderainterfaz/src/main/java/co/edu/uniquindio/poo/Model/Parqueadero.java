@@ -14,6 +14,10 @@ public class Parqueadero {
 
 
 
+    /**
+     * 
+     * @return
+     */
     public String getNombre() {
         return nombre;
     }
